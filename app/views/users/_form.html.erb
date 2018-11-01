@@ -1,13 +1,24 @@
 <div class="container-fluid mt-3">
   <div class="row">
-    <div class="col-sm-6 mx-auto">
-      <%= bootstrap_form_for(@user) do |f| %>
-        <%= f.text_field :username, hide_label: true, label_as_placeholder: true %>
-        <%= f.email_field :email, hide_label: true, label_as_placeholder: true %>
-        <%= f.password_field :password, hide_label: true, label_as_placeholder: true %>
-        <%= f.submit class: "btn btn-primary" %>
-        <%= link_to "Cancel", :back, class: "btn btn-danger" %>
-      <% end %>
+    <div class="col-sm-5 mx-auto">
+      <div class="card p-5">
+        <h1 class="text-center"><%= @user.new_record? ? "Sign up" : "Edit Account" %></h1>
+        <div class="card-body">
+          <%= bootstrap_form_for(@user) do |f| %>
+            <%= f.text_field :username, hide_label: true, label_as_placeholder: true %>
+            <%= f.email_field :email, hide_label: true, label_as_placeholder: true %>
+            <%= f.password_field :password, hide_label: true, placeholder: @user.new_record? ? "Create a password" : "Create a password" %>
+            <%= f.submit @user.new_record? ? "Create account" : "Save settings", class: "btn btn-primary btn-block" %>
+          <% end %>
+        </div>
+        <p class="text-center text-muted">
+          <% if @user.new_record? %>
+            <small>Already a member? <%= link_to "Log in", login_path, class: "font-weight-bold text-secondary" %></small>
+          <% else %>
+            <small>Deactivate Account</small>
+          <% end %>
+        </p>
+      </div>
     </div>
   </div>
 </div>
