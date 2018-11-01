@@ -8,8 +8,9 @@
     <p class="card-text"><%= simple_format(@article.description) %></p>
   </div>
   <div class="card-footer">
-    <%= link_to "Edit", edit_article_path(@article), class: "badge badge-primary" %>
-    <%= link_to "Delete", edit_article_path(@article), class: "badge badge-danger",
-                          data: { confirm: "Are you sure?" } %>
+          <%= link_to "Edit", edit_article_path(@article), class: "badge badge-secondary" %>
+          <%= link_to "Delete", article_path(@article),  class: "badge badge-secondary", 
+                                method: :delete,
+                                data: { confirm: "Are you sure?" } %>
   </div>
 </div>
