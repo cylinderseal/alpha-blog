@@ -1,2 +1,15 @@
-<h1>Title: <%= @article.title %></h1>
-<p>Description: <%= @article.description %></p>
+<h2 class="text-center"><%= @article.title %></h2>
+
+<div class="card text-center col-sm-8 mx-auto">
+  <div class="card-header">
+    <h4>Description:</h4>
+  </div>
+  <div class="card-body">
+    <p class="card-text"><%= simple_format(@article.description) %></p>
+  </div>
+  <div class="card-footer">
+    <%= link_to "Edit", edit_article_path(@article), class: "badge badge-primary" %>
+    <%= link_to "Delete", edit_article_path(@article), class: "badge badge-danger",
+                          data: { confirm: "Are you sure?" } %>
+  </div>
+</div>
