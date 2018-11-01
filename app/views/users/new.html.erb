@@ -1,0 +1,17 @@
+<h1 class="text-center display-3">Sign Up</h1>
+
+<div class="container-fluid mt-3">
+  <div class="row">
+    <div class="col-sm-6 mx-auto">
+      <%= bootstrap_form_for(@user) do |f| %>
+        <%= f.text_field :username, hide_label: true, label_as_placeholder: true %>
+        <%= f.email_field :email, hide_label: true, label_as_placeholder: true %>
+        <%= f.password_field :password, hide_label: true, label_as_placeholder: true %>
+        <%= f.submit class: "btn btn-primary" %>
+        <%= link_to "Cancel", :back, class: "btn btn-danger" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
