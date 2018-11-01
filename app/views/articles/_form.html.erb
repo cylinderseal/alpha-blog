@@ -1,17 +1,5 @@
-<%= form_for(@article) do |f| %>
-  <div class="form-group row">
-    <%= f.label :title, class: "col-sm-2 col-form-label text-right d-none d-sm-block" %>
-    <div class="col-sm-10">
-      <%= f.text_field :title, class: "form-control", placeholder: "Title" %>
-    </div>
-  </div>
-  <div class="form-group row">
-    <%= f.label :description, class: "col-sm-2 col-form-label text-right d-none d-sm-block" %>
-    <div class="col-sm-10">
-      <%= f.text_area :description, class: "form-control", placeholder: "Description", rows: 7 %>
-    </div>
-  </div>
-    <div class="col-sm-8">
-      <%= f.submit class: "btn btn-primary offset-sm-3" %>
-    </div>
+<%= bootstrap_form_for(@article) do |f| %>
+  <%= f.text_field :title, hide_label: true, label_as_placeholder: true %>
+  <%= f.text_area :description, hide_label: true, label_as_placeholder: true, rows: 7 %>
+  <%= f.submit %>
 <% end %>
