@@ -1,7 +1,13 @@
-<%= bootstrap_form_for(@article) do |f| %>
-  <%= f.text_field :title, hide_label: true, label_as_placeholder: true %>
-  <%= f.text_area :description, hide_label: true, label_as_placeholder: true, rows: 7 %>
-  <%= f.submit %>
-  <%= link_to "Cancel", :back, class: "btn btn-secondary" %>
-<% end %>
+<div class="container-fluid mt-3">
+  <div class="row">
+    <div class="col-sm-8 mx-auto">
+      <%= bootstrap_form_for(@article) do |f| %>
+        <%= f.text_field :title, hide_label: true, label_as_placeholder: true %>
+        <%= f.text_area :description, hide_label: true, label_as_placeholder: true, rows: 7 %>
+        <%= f.submit class: "btn btn-primary" %>
+        <%= link_to "Cancel", :back, class: "btn btn-danger" %>
+      <% end %>
+    </div>
+  </div>
+</div>
 

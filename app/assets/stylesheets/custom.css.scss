@@ -1,34 +1,49 @@
+// $primary: #098DBA;
+
+$theme-colors: (
+  "primary":    #118AB2,
+  "success":    #06D6A0,
+  "info":       #073B4C,
+  "warning":    #FFD166,
+  "danger":     #EF476F
+);
 
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Cardo|Oswald:400,700');
+@import "font-awesome";
+
+body {
+  background-color: #073B4C;
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
 #logo {
-  float: left;
-  font-size: 1.7em;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: -1px;
+  -webkit-text-stroke: 5px white;
+}
+
+.navbar-brand > span {
+  vertical-align: 5px;
+}
+
+h1, h2 {
+  font-family: 'Oswald', sans-serif;
+  color: #FFD166;
+}
+
+.home h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 6.5em;
+  color: #FFD166;
+  letter-spacing: 0px;
+  line-height: 92px;
+  margin-top: 75px;
   font-weight: bold;
 }
-
-#logo:hover {
-  color: #fff;
-  text-decoration: none;
-}
-
-.jumbotron {
-  background-image: asset-url('bg.jpeg');
-  background-size: cover;
-  height: 550px;
-  
-  h1 {
-    color: #fff;
-    margin-bottom: 30px;
-    letter-spacing: -1px;
-    font-weight: bold;
-  }
-  .btn-xlarge {
-    font-size: 1.7em;
-  }
+.btn-xlarge {
+  font-size: 2.7em;
 }
 
 .alert-alert {

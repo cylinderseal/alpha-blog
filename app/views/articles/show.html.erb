@@ -1,4 +1,4 @@
-<h2 class="text-center"><%= @article.title %></h2>
+<h2 class="text-center display-3"><%= @article.title %></h2>
 
 <div class="card text-center col-sm-8 mx-auto">
   <div class="card-header">
@@ -8,8 +8,8 @@
     <p class="card-text"><%= simple_format(@article.description) %></p>
   </div>
   <div class="card-footer">
-          <%= link_to "Edit", edit_article_path(@article), class: "badge badge-secondary" %>
-          <%= link_to "Delete", article_path(@article),  class: "badge badge-secondary", 
+          <%= link_to "Edit", edit_article_path(@article), class: "badge badge-primary" %>
+          <%= link_to "Delete", article_path(@article),  class: "badge badge-danger", 
                                 method: :delete,
                                 data: { confirm: "Are you sure?" } %>
   </div>
