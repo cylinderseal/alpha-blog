@@ -19,6 +19,13 @@
                   <%= pluralize(user.articles.count, "article") if user.articles %>
                 </small>
               </li>
+              <% if logged_in? && current_user.admin? %>
+                <div class="bd-highlight ml-2">
+                  <%= link_to "Delete", user,  class: "badge badge-danger", 
+                                                  method: :delete,
+                                                  data: { confirm: "Are you sure?" } %>
+                </div>
+            <% end %>
           </div>
         </div>
       </div>
