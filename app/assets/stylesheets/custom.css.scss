@@ -1,55 +1,82 @@
 // $primary: #098DBA;
 
 $theme-colors: (
-  "primary":    #118AB2,
+  "primary":    #144474,
   "success":    #06D6A0,
-  "info":       #073B4C,
-  "warning":    #FFD166,
+  "info":       #2C62A6,
+  "warning":    #FAC954,
   "danger":     #EF476F
 );
 
+// $btn-border-radius-lg: 24px;
+// // #FC4A1A
+// //#F7B733
 @import "bootstrap";
-@import url('https://fonts.googleapis.com/css?family=Cardo|Oswald:400,700');
+@import url('https://fonts.googleapis.com/css?family=Arvo|PT+Sans:400,700');
 @import "font-awesome";
 
+/* Global */ 
+
+html {
+	* {
+		margin: 0;
+		padding: 0;
+		font-size: 17px;
+	}
+}
+
 body {
-  background-color: #073B4C;
-  height: 100%;
-  margin: 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+	// width: 100wh;
+	// height: auto;
+	// font-size: 20px;
+ // background-image: url('jungle.png');
+	// background-attachment:fixed;
+	// background-size:cover; 
+	// background-repeat:no-repeat;
+	
+	// background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	// background-size: 400% 400%;
+	// -webkit-animation: Gradient 15s ease infinite;
+	// -moz-animation: Gradient 15s ease infinite;
+	// animation: Gradient 15s ease infinite;
 }
 
-#logo {
-  -webkit-text-stroke: 5px white;
-}
+// @-webkit-keyframes Gradient {
+// 	0% {
+// 		background-position: 0% 50%
+// 	}
+// 	50% {
+// 		background-position: 100% 50%
+// 	}
+// 	100% {
+// 		background-position: 0% 50%
+// 	}
+// }
 
-.navbar-brand > span {
-  vertical-align: 5px;
-}
+// @-moz-keyframes Gradient {
+// 	0% {
+// 		background-position: 0% 50%
+// 	}
+// 	50% {
+// 		background-position: 100% 50%
+// 	}
+// 	100% {
+// 		background-position: 0% 50%
+// 	}
+// }
 
-h1, h2 {
-  font-family: 'Oswald', sans-serif;
-  color: #FFD166;
-}
+// @keyframes Gradient {
+// 	0% {
+// 		background-position: 0% 50%
+// 	}
+// 	50% {
+// 		background-position: 100% 50%
+// 	}
+// 	100% {
+// 		background-position: 0% 50%
+// 	}
+// }
 
-.home h1 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 2.3em;
-  color: #FFD166;
-  letter-spacing: 2px;
-  margin-top: 29px;
-  font-weight: bold;
-}
-
-.home p {
-  font-size: 1.2em;
-}
-
-.listing {
-  list-style: none;
-  padding-left: 0;
-}
 
 .alert-alert {
   @extend .alert-danger;
@@ -59,36 +86,134 @@ h1, h2 {
   @extend .alert-success;
 }
 
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #777;
+
+
+
+/* Navbar */
+
+#logo {
+  -webkit-text-stroke: 5px white;
 }
 
-footer a:hover {
-  color: #222;
+.navbar-brand > span {
+  vertical-align: 5px;
 }
 
-footer small {
-  float: left;
-}
+// .login-signup {
+//   border-radius: 18px;
+//   padding: 0.9em 0.9em;
+// }
 
-footer ul {
-  float: right;
+.listing {
   list-style: none;
+  padding-left: 0;
 }
 
-footer ul li {
-  float: left;
-  margin-left: 15px;
+/* Home */
+
+#showcase {
+	background-image: url('jungle.png');
+	background-position: center;
+	background-size: cover;
+	color: #FFF;
+	height: 100vh;
+	// padding: 0 20px;
 }
 
-.login-signup {
-  border-radius: 18px;
-  padding: 0.9em 0.9em;
+#showcase h1 {
+	color: #D87E51;
+	font-size: 2.6em;
+	line-height: 0.90em;
 }
 
-.card {
-  border-radius: 8px;
+#showcase p {
+	color: #1E222D;
+	margin-top: 20px;
+	font-size: 1.3em;
+	line-height: 1.3em;
 }
+
+#showcase .card {
+	background-color: #FAC954;
+	border-radius: 20px;
+	padding: 5rem 3rem 5rem 3rem;
+}
+
+#showcase a {
+	border-radius: 10px;
+	font-size: 1.3em;
+	font-weight: 600;
+	margin-top: 30px;
+	padding: 10px 20px;
+	text-decoration: none;
+	
+}
+
+@media only screen and (max-width: 575.98px) {
+	.card-body {
+  	padding: 0.25rem
+  }
+  
+  #showcase a {
+  	margin-left: auto;
+  	margin-right: auto;
+  	display: block;
+  	display: block;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #showcase .card {
+  	padding: 1em;
+  }
+  #showcase button {
+  	margin-left: auto;
+  	margin-right: auto;
+  	display: block;
+  	display: block;
+    width: 100%;
+  }
+  
+}
+
+@media only screen and (max-width: 991.98px) {
+	#showcase .card {
+  	padding: 1em;
+  }
+}
+
+@media only screen and (max-width: 1199.98px) {
+	#showcase .card {
+  	padding: 1em;
+  }
+}
+
+
+
+/* Footer */
+
+// footer {
+//   margin-top: 45px;
+//   padding-top: 5px;
+//   border-top: 1px solid #eaeaea;
+//   color: #777;
+// }
+
+// footer a:hover {
+//   color: #222;
+// }
+
+// footer small {
+//   float: left;
+// }
+
+// footer ul {
+//   float: right;
+//   list-style: none;
+// }
+
+// footer ul li {
+//   float: left;
+//   margin-left: 15px;
+// }

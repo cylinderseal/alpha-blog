@@ -1,12 +1,36 @@
-<div class="home container-fluid text-center">
-  <h1 class="text-center">
-    Express yourself and <br> share your passions.
-  </h1>
-  <p class="text-center text-white">
-    Alpha Blog, enables you to capture and share the things that matter to you.
-    on
-  </p>
-  <%= link_to "Sign Up - It's free.", signup_path, class: "p-3 btn btn-primary btn-lg" %>
-</div>
+<header id="showcase" class="d-flex flex-column justify-content-center align-items-center">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 mx-auto">
+        <div class="card">
+          <div class="card-body text-dark">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-6 mt-5 text-md-left text-center">
+                  <h1>Publish your passions, your way</h1>
+                  <p>Create a unique and beautiful blog. It’s easy and free.</p>
+                  <%= link_to 'Sign up', signup_path, class: "btn btn-primary mb-3" %>
+                </div>
+                <div class="col-sm-6 mb-5">
+                  <%= image_tag('illustration.svg', class: "img-fluid" ) %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- row -->
+  </div><!-- container-fluid -->
+</header>
+
+
+
+<!--<section id="section-a">-->
+<!--  <p>Some paragraph again.</p>-->
+<!--</section>-->
+
+
+
+
 
 
